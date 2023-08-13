@@ -3,14 +3,21 @@ import { palette } from '@/styles/palette';
 
 type TProps = {
   title: string;
-  description: string;
+  description: string | string[];
 };
 
 function Guide({ title, description }: TProps) {
+  const descriptionText =
+    typeof description === 'string'
+      ? description
+      : description.map((description, index) => (
+          <p key={index}>{description}</p>
+        ));
+
   return (
     <Container>
       <Title>{title}</Title>
-      <Description>{description}</Description>
+      <Description>{descriptionText}</Description>
     </Container>
   );
 }
@@ -36,10 +43,10 @@ const Title = styled.p`
   line-height: normal;
 `;
 
-const Description = styled.p`
+const Description = styled.div`
   color: #7c7c7c;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
-  line-height: 150%; /* 24px */
+  line-height: 150%;
 `;

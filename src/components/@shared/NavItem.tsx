@@ -11,7 +11,6 @@ type TProps = {
 function NavItem({ path, name }: TProps) {
   const pathname = usePathname();
   const isActive = pathname.includes(path);
-  console.log('isActive', isActive);
   return (
     <div
       css={css`
