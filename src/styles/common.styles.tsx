@@ -1,19 +1,19 @@
 import { palette } from '@/styles/palette';
-import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
-export const Title = styled.p`
+export const titleStyle = css`
   color: ${palette.black};
   font-size: 30px;
   font-weight: 600;
 `;
 
-export const Description = styled.p`
+export const descriptionStyle = css`
   color: ${palette.black};
   font-size: 20px;
   font-weight: 300;
 `;
 
-export const Date = styled.p`
+export const dateStyle = css`
   color: ${palette.grey};
   font-size: 14px;
   font-weight: 300;

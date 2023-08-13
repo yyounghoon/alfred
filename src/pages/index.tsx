@@ -1,8 +1,4 @@
-import Header from '@/components/@shared/Header';
-import Guide from '@/components/@shared/Guide';
 import styled from '@emotion/styled';
-import ListItem from '@/components/Post';
-import * as matter from 'gray-matter';
 
 function IntroPage() {
   return (

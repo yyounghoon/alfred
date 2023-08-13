@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import Link from 'next/link';
+import { palette } from '@/styles/palette';
 
 function Header() {
   return (
@@ -26,8 +27,8 @@ const Nav = styled.div`
 `;
 
 const Title = styled.p`
-  color: #000;
-  font-size: 30px;
+  color: ${palette.black};
+  font-size: 22px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -39,12 +40,9 @@ const Menu = styled.div`
   gap: 60px;
 
   a {
-    color: #000;
+    color: ${palette.black};
     font-size: 22px;
     font-style: normal;
-    font-weight: 700;
     line-height: normal;
-    letter-spacing: -0.44px;
-    text-decoration: none;
   }
 `;

@@ -18,10 +18,13 @@ export default Layout;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  height: 100%;
 `;
 
 const MainSection = styled.section`
   flex: 1;
-  margin: auto;
-  max-width: ;
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 24px;
 `;

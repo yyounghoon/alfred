@@ -1,7 +1,12 @@
 import { TPost } from '@/pages/posts';
 import Link from 'next/link';
-import { Date, Description, Title } from '@/styles/common.styles';
 import styled from '@emotion/styled';
+import { palette } from '@/styles/palette';
+import {
+  dateStyle,
+  descriptionStyle,
+  titleStyle,
+} from '@/styles/common.styles';
 
 function Post({ title, date, description, slug }: TPost) {
   return (
@@ -22,5 +27,23 @@ export const Container = styled.div`
 
   height: 165px;
   padding: 32px 24px;
-  gap: 12px;
+  border-radius: 12px;
+
+  :hover {
+    background: ${palette.lightGrey};
+  }
+`;
+
+export const Title = styled.p`
+  ${titleStyle}
+  margin-bottom: 24px;
+`;
+
+export const Description = styled.p`
+  ${descriptionStyle}
+  margin-bottom: 12px;
+`;
+
+export const Date = styled.p`
+  ${dateStyle}
 `;
