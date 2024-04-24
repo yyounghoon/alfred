@@ -10,15 +10,15 @@ export type TPost = {
   slug: string;
 };
 
-export const getStaticProps = () => {
-  return {
-    props: {
-      posts: getAllPosts(),
-    },
-  };
-};
+// export const getStaticProps = () => {
+//   return {
+//     props: {
+//       posts: getAllPosts(),
+//     },
+//   };
+// };
 
-function PostsPage({ posts }: { posts: TPost[] }) {
+function PostsPage({ posts = [] }: { posts: TPost[] }) {
   return (
     <>
       <Guide

@@ -1,4 +1,4 @@
-import { TPost } from '@/pages/posts';
+import { TPost } from '../../app/posts/page';
 import Link from 'next/link';
 import styled from '@emotion/styled';
 import { palette } from '@/styles/palette';

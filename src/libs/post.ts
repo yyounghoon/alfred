@@ -1,7 +1,7 @@
 import path, { join } from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
-import { TPost } from '@/pages/posts/[slug]';
+import { TPost } from '../../app/posts/[slug]';
 
 const BASE_PATH = 'src';
 const POSTS_PATH = path.join(process.cwd(), 'src/_posts');
