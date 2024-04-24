@@ -1,5 +1,6 @@
-import Header from '@/components/@shared/Header';
+import Header from '@/app/header';
 import { container, mainSection } from './layout.css';
+import '@/styles/globals.css';
 
 export const metadata = {
   title: '윤영훈 블로그',
