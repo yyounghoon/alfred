@@ -1,5 +1,5 @@
-import { getAllPosts, getPostBySlug } from '@/libs/post';
-import markdownToHtml from '@/libs/markdownToHtml';
+import { getAllPosts, getPostBySlug } from '@/entities/posts/libs/post';
+import markdownToHtml from '@/entities/posts/libs/markdownToHtml';
 import {
   dateStyle,
   descriptionStyle,

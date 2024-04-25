@@ -1,7 +1,7 @@
 import { style } from '@vanilla-extract/css';
 
 export const nav = style({
-  height: 60,
+  height: 80,
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
@@ -23,4 +23,16 @@ export const title = style({
 export const menu = style({
   display: 'flex',
   alignItems: 'center',
+});
+
+export const menuItem = style({
+  padding: '12px 10px',
+  fontSize: 16,
+  fontWeight: 500,
+  transition: 'border-bottom 0.25s',
+
+  ':hover': {
+    fontWeight: 700,
+    borderBottom: '4px solid red',
+  },
 });

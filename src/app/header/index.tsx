@@ -1,15 +1,10 @@
-'use client';
-
-import styled from '@emotion/styled';
+import { menu, menuItem, nav, title } from './index.css';
 import Link from 'next/link';
-import { palette } from '@/styles/palette';
-import NavItem from '@/components/@shared/NavItem';
-import { menu, nav, title } from './index.css';
 
 const menuMap = {
-  posts: 'geul',
-  photos: 'sajin',
-  about: 'sogae',
+  posts: '글',
+  photos: '사진',
+  about: '소개',
 };
 
 const menuList = Object.entries(menuMap);
@@ -22,7 +17,9 @@ function Header() {
       </Link>
       <div className={menu}>
         {menuList.map(([path, name]) => (
-          <NavItem key={path} path={path} name={name} />
+          <div key={name} className={menuItem}>
+            {name}
+          </div>
         ))}
       </div>
     </nav>

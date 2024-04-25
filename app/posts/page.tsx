@@ -1,6 +1,6 @@
-import Guide from '@/components/@shared/Guide';
-import { getAllPosts } from '@/libs/post';
-import Post from '@/components/Post';
+import Guide from '@/entities/admin/ui/Guide';
+import { getAllPosts } from '@/entities/posts/libs/post';
+import Post from '@/entities/posts/ui/Post';
 
 export type TPost = {
   title: string;
