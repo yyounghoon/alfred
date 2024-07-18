@@ -1,6 +1,6 @@
 import Guide from '@/entities/admin/ui/Guide';
 import { getAllPosts } from '@/entities/posts/libs/post';
-import Post from '@/entities/posts/ui/Post';
+import PostCard from '@/entities/posts/ui/PostCard';
 
 export type TPost = {
   title: string;
@@ -10,15 +10,9 @@ export type TPost = {
   slug: string;
 };
 
-// export const getStaticProps = () => {
-//   return {
-//     props: {
-//       posts: getAllPosts(),
-//     },
-//   };
-// };
+function PostsPage() {
+  const posts = getAllPosts();
 
-function PostsPage({ posts = [] }: { posts: TPost[] }) {
   return (
     <>
       <Guide
@@ -28,7 +22,7 @@ function PostsPage({ posts = [] }: { posts: TPost[] }) {
         }
       />
       {posts.map((post) => (
-        <Post key={post.slug} {...post} />
+        <PostCard key={post.slug} {...post} />
       ))}
     </>
   );

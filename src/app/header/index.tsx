@@ -17,9 +17,11 @@ function Header() {
       </Link>
       <div className={menu}>
         {menuList.map(([path, name]) => (
-          <div key={name} className={menuItem}>
-            {name}
-          </div>
+          <Link key={path} href={path}>
+            <div key={name} className={menuItem}>
+              {name}
+            </div>
+          </Link>
         ))}
       </div>
     </nav>

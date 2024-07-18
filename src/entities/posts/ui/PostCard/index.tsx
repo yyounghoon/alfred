@@ -1,4 +1,3 @@
-import { TPost } from '../../../../../app/posts/page';
 import Link from 'next/link';
 import {
   container,
@@ -6,8 +5,9 @@ import {
   descriptionStyle,
   titleStyle,
 } from './index.css';
+import { TPost } from '../../../../../app/posts/page';
 
-function Post({ title, date, description, slug }: TPost) {
+function PostCard({ title, date, description, slug }: TPost) {
   return (
     <Link href={`posts/${slug}`}>
       <div className={container}>
@@ -18,4 +18,4 @@ function Post({ title, date, description, slug }: TPost) {
     </Link>
   );
 }
-export default Post;
+export default PostCard;

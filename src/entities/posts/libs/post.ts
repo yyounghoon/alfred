@@ -1,10 +1,9 @@
 import path, { join } from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
-import { TPost } from '../../../../app/posts/[slug]';
+import { TPost } from '../../../../app/posts/page';
 
-const BASE_PATH = 'src';
-const POSTS_PATH = path.join(process.cwd(), 'src/_posts');
+const POSTS_PATH = path.join(process.cwd(), '_posts');
 
 export function getPostSlugs() {
   return fs.readdirSync(POSTS_PATH);

@@ -5,7 +5,7 @@ export const container = style({
   display: 'flex',
   flexDirection: 'column',
 
-  height: '165px',
+  minHeight: '165px',
   padding: '32px 24px',
   borderRadius: '12px',
 
