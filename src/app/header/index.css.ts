@@ -5,7 +5,7 @@ export const nav = style({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  padding: '12px 32px',
+  padding: '12px 20px',
 });
 
 export const title = style({
