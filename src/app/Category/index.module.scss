@@ -1,0 +1,18 @@
+.category {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #111;
+
+  &.mobile {
+    height: 43px;
+    color: #111;
+    font-size: 24px;
+    line-height: 1.8;
+  }
+
+  &.active {
+    border-bottom: 2px solid #44f;
+    color: #44f;
+    font-weight: 700;
+  }
+}

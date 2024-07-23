@@ -1,0 +1,49 @@
+$transition-duration: 0.3s;
+
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+
+  &-enter {
+    transform: translateX(100%);
+  }
+
+  &-enter-active {
+    transform: translateX(0);
+    transition: transform $transition-duration;
+  }
+
+  &-exit {
+  }
+
+  &-exit-active {
+    transform: translateX(100%);
+    transition: transform $transition-duration;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 18px;
+
+    .closeBtn {
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      padding: 8px 16px;
+    }
+  }
+
+  .categoryList {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 40px;
+  }
+}
