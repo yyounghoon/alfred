@@ -8,6 +8,10 @@ import { useState } from 'react';
 import DrawerMenu from '../DrawerMenu';
 import { CONSTANTS } from '@/shared/constants';
 import Category from '../Category';
+import LinkedInIcon from '@/shared/components/Icon/LinkedInIcon';
+import EmailIcon from '@/shared/components/Icon/EmailIcon';
+import GithubIcon from '@/shared/components/Icon/GithubIcon';
+import styles from './index.module.scss';
 
 const categoryList = Object.values(CONSTANTS.CATEGORY);
 
@@ -34,10 +38,23 @@ function Header() {
       {isMobile ? (
         <>{!isDrawerOpen && <MobileMenuIcon onClick={handleDrawerToggle} />}</>
       ) : (
-        <div className={menu}>
-          {categoryList.map((title) => (
-            <Category key={title} title={title} />
-          ))}
+        <div className={styles.wrapper}>
+          <div className={menu}>
+            {categoryList.map((title) => (
+              <Category key={title} title={title} />
+            ))}
+          </div>
+          <div className={styles.icons}>
+            <Link href={'mailto:younghoondev@gmail.com'}>
+              <EmailIcon />
+            </Link>
+            <Link href="https://www.linkedin.com/in/yyounghoon" target="_blank">
+              <LinkedInIcon />
+            </Link>
+            <Link href={'https://github.com/yoonyounghoon'} target="_blank">
+              <GithubIcon />
+            </Link>
+          </div>
         </div>
       )}
     </nav>

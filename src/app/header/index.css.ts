@@ -14,6 +14,7 @@ export const nav = style({
 });
 
 export const title = style({
+  minWidth: 160,
   color: 'black',
   fontSize: 22,
   fontStyle: 'normal',
