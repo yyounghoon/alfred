@@ -1,11 +1,16 @@
 import { style } from '@vanilla-extract/css';
 
 export const nav = style({
-  height: 80,
+  minHeight: 80,
   display: 'flex',
-  justifyContent: 'space-between',
   alignItems: 'center',
   padding: '12px 20px',
+
+  '@media': {
+    '(max-width: 960px)': {
+      justifyContent: 'space-between',
+    },
+  },
 });
 
 export const title = style({
@@ -23,6 +28,8 @@ export const title = style({
 export const menu = style({
   display: 'flex',
   alignItems: 'center',
+  marginLeft: 32,
+  gap: 32,
 });
 
 export const menuItem = style({

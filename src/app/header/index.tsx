@@ -1,19 +1,15 @@
 'use client';
 
 import { useMediaQuery } from 'react-responsive';
-import { menu, menuItem, nav, title } from './index.css';
+import { menu, nav, title } from './index.css';
 import Link from 'next/link';
 import { MobileMenuIcon } from '@/shared/components/Icon';
 import { useState } from 'react';
 import DrawerMenu from '../DrawerMenu';
+import { CONSTANTS } from '@/shared/constants';
+import Category from '../Category';
 
-const menuMap = {
-  posts: '글',
-  photos: '사진',
-  about: '소개',
-};
-
-const menuList = Object.entries(menuMap);
+const categoryList = Object.values(CONSTANTS.CATEGORY);
 
 function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -22,7 +18,7 @@ function Header() {
     query: '(max-width: 960px)',
   });
 
-  const handleDrawerOpen = () => {
+  const handleDrawerToggle = () => {
     setIsDrawerOpen((prev) => !prev);
   };
 
@@ -31,22 +27,19 @@ function Header() {
       <Link href={'/'}>
         <h2 className={title}>youn younghoon</h2>
       </Link>
+      <DrawerMenu
+        isOpen={isDrawerOpen}
+        handleDrawerToggle={handleDrawerToggle}
+      />
       {isMobile ? (
-        <div>
-          <MobileMenuIcon onClick={handleDrawerOpen} />
-        </div>
+        <>{!isDrawerOpen && <MobileMenuIcon onClick={handleDrawerToggle} />}</>
       ) : (
         <div className={menu}>
-          {menuList.map(([path, name]) => (
-            <Link key={path} href={path}>
-              <div key={name} className={menuItem}>
-                {name}
-              </div>
-            </Link>
+          {categoryList.map((title) => (
+            <Category key={title} title={title} />
           ))}
         </div>
       )}
-      {isDrawerOpen && <DrawerMenu setIsDrawerOpen={setIsDrawerOpen} />}
     </nav>
   );
 }
