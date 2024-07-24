@@ -27,4 +27,5 @@ export const descriptionStyle = style({
   fontStyle: 'normal',
   fontWeight: 300,
   lineHeight: '150%',
+  whiteSpace: 'pre-line',
 });
