@@ -36,7 +36,13 @@ function Header() {
         handleDrawerToggle={handleDrawerToggle}
       />
       {isMobile ? (
-        <>{!isDrawerOpen && <MobileMenuIcon onClick={handleDrawerToggle} />}</>
+        <>
+          {!isDrawerOpen && (
+            <button onClick={handleDrawerToggle} className={styles.closeBtn}>
+              <MobileMenuIcon />
+            </button>
+          )}
+        </>
       ) : (
         <div className={styles.wrapper}>
           <div className={menu}>
