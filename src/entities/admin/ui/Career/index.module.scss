@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .company {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .name {
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      .date {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.87);
+      }
+    }
+
+    .logo {
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  .descBox {
+    margin-top: 16px;
+    border-left: 4px solid #e0e0e0;
+    padding-left: 16px;
+
+    .groupName {
+      font-size: 16px;
+      font-weight: bold;
+
+      margin-bottom: 4px;
+    }
+    .desc {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+}
