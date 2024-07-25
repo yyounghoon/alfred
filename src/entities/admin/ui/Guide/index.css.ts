@@ -8,7 +8,7 @@ export const container = style({
   alignItems: 'flex-start',
   gap: '20px',
   padding: '24px',
-  margin: '80px 0',
+  margin: '20px 0 80px',
   border: `1px solid ${palette.lightGrey}`,
   borderRadius: '12px',
 });

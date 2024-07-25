@@ -32,7 +32,7 @@ const CAREER_LIST: TCareer[] = [
   {
     logoUrl: '/assets/huray.jpg',
     companyName: '휴레이 포지티브',
-    totalDate: '2021.10 ~ 202312',
+    totalDate: '2021.10 ~ 2023.12',
     group: [
       {
         groupName: '프론트엔드팀',
