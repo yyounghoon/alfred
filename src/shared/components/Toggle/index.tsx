@@ -3,10 +3,14 @@ import styles from './index.module.scss';
 import { ThemeContext } from '@/app/ThemeProvider';
 
 function Toggle() {
-  const { isDarkMode } = useContext(ThemeContext);
+  const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
   return (
-    <div className={styles.container}>
-      <div className={styles.ball} data-darkMode={isDarkMode}></div>
+    <div
+      className={styles.container}
+      data-dark-mode={isDarkMode}
+      onClick={toggleDarkMode}
+    >
+      <div className={styles.ball} data-dark-mode={isDarkMode}></div>
     </div>
   );
 }

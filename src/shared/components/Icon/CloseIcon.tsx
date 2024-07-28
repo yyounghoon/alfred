@@ -1,9 +1,10 @@
 type TProps = {
   className?: string;
   onClick?: () => void;
+  isDarkMode?: boolean;
 };
 
-function CloseIcon({ className, onClick }: TProps) {
+function CloseIcon({ isDarkMode, onClick }: TProps) {
   return (
     <svg
       width="24"
@@ -15,7 +16,7 @@ function CloseIcon({ className, onClick }: TProps) {
     >
       <path
         d="M17.9999 17.9999L6 6M18 6L6 18"
-        stroke="#161519"
+        stroke={isDarkMode ? '#fff' : '#161519'}
         stroke-width="1.5"
         stroke-linecap="round"
         stroke-linejoin="round"

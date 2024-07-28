@@ -5,6 +5,9 @@ import { CONSTANTS } from '@/shared/constants';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Category from '../Category';
+import { useContext } from 'react';
+import { ThemeContext } from '../ThemeProvider';
+import Toggle from '@/shared/components/Toggle';
 
 const categoryList = Object.values(CONSTANTS.CATEGORY);
 
@@ -15,6 +18,7 @@ type TProps = {
 
 function DrawerMenu({ isOpen, handleDrawerToggle }: TProps) {
   const pathname = usePathname();
+  const { isDarkMode } = useContext(ThemeContext);
 
   const handleClose = () => {
     handleDrawerToggle();
@@ -35,12 +39,15 @@ function DrawerMenu({ isOpen, handleDrawerToggle }: TProps) {
       <div className={styles.container}>
         <div className={styles.header}>
           <h1>Category</h1>
-          <button className={styles.closeBtn} onClick={handleClose}>
-            <CloseIcon />
-          </button>
+          <div className={styles.right}>
+            <Toggle />
+            <button className={styles.closeBtn} onClick={handleClose}>
+              <CloseIcon isDarkMode={isDarkMode} />
+            </button>
+          </div>
         </div>
-        <div>
-          <ul className={styles.categoryList} onClick={handleClose}>
+        <div onClick={handleClose}>
+          <ul className={styles.categoryList}>
             {categoryList.map((category) => (
               <Category key={category} title={category} isMobile />
             ))}

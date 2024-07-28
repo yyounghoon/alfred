@@ -43,7 +43,7 @@ function Header() {
         <>
           {!isDrawerOpen && (
             <button onClick={handleDrawerToggle} className={styles.closeBtn}>
-              <MobileMenuIcon />
+              <MobileMenuIcon isDarkMode={isDarkMode} />
             </button>
           )}
         </>
@@ -54,9 +54,8 @@ function Header() {
               <Category key={title} title={title} />
             ))}
           </div>
-          <div className={styles.themeToggle} onClick={toggleDarkMode}>
-            <Toggle />
-          </div>
+          <Toggle />
+
           {/* <div className={styles.icons}>
             <Link href={'mailto:younghoondev@gmail.com'}>
               <EmailIcon />

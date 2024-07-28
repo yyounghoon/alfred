@@ -12,12 +12,13 @@ function Category({ title, isMobile }: TProps) {
   const pathname = usePathname();
 
   const isActive = CONSTANTS.ROUTE_MAP[title] === pathname;
+  const isDetailPage = title === 'Posts' && pathname?.includes('posts');
 
   return (
     <Link key={title} href={CONSTANTS.ROUTE_MAP[title]}>
       <div
         key={title}
-        className={`${styles.category} ${isActive && styles.active} ${isMobile && styles.mobile}`}
+        className={`${styles.category} ${isActive && styles.active} ${isMobile && styles.mobile} ${isDetailPage && styles.active}`}
       >
         {title}
       </div>

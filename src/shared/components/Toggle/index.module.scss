@@ -1,19 +1,27 @@
 .container {
-  width: 44px;
+  width: 46px;
   height: 24px;
   border-radius: 8px;
-  border: 1px solid var(--black);
+  background: #d2d2d2;
   padding: 2px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &[data-dark-mode='true'] {
+    background: var(--hover);
+  }
 }
 
 .ball {
   width: 50%;
   height: 100%;
   border-radius: 50%;
-  background: var(--black);
+  background-color: #fff;
   transition: transform 0.3s;
 
-  &[data-darkMode='true'] {
+  &[data-dark-mode='true'] {
     transform: translateX(100%);
   }
 }

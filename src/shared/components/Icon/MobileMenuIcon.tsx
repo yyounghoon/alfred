@@ -1,9 +1,10 @@
 type TProps = {
   className?: string;
+  isDarkMode?: boolean;
   onClick?: () => void;
 };
 
-function MobileMenuIcon({ className, onClick }: TProps) {
+function MobileMenuIcon({ isDarkMode, onClick }: TProps) {
   return (
     <svg
       width="18"
@@ -15,7 +16,7 @@ function MobileMenuIcon({ className, onClick }: TProps) {
     >
       <path
         d="M1 13H17M1 7H17M1 1H17"
-        stroke="#161519"
+        stroke={isDarkMode ? '#fff' : '#161519'}
         stroke-width="1.5"
         stroke-linecap="round"
         stroke-linejoin="round"
