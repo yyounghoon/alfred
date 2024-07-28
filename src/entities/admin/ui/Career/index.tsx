@@ -12,9 +12,9 @@ function Career({ career }: TProps) {
   return (
     <div className={styles.container}>
       <div className={styles.company}>
-        <div className={styles.logo}>
+        {/* <div className={styles.logo}>
           <img src={logoUrl} alt="company-logo" />
-        </div>
+        </div> */}
         <div className={styles.title}>
           <h1 className={styles.name}>{companyName}</h1>
           <span className={styles.date}>{totalDate}</span>

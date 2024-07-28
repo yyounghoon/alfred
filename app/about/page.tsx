@@ -45,14 +45,8 @@ const CAREER_LIST: TCareer[] = [
 function AboutPage() {
   return (
     <>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '48px',
-        }}
-      >
-        <h1>블로그 주인 소개</h1>
+      <div className={styles.container}>
+        <h1 className={styles.title}>블로그 주인 소개</h1>
         <div className={styles.introduce}>
           <div className={styles.my}>
             <h2 className={styles.name}>윤영훈</h2>

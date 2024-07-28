@@ -1,0 +1,17 @@
+@mixin titleStyle {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--black);
+}
+
+@mixin descriptionStyle {
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 300;
+}
+
+@mixin dateStyle {
+  color: var(--grey);
+  font-size: 20px;
+  font-weight: 300;
+}

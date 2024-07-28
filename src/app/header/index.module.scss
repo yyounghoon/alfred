@@ -1,3 +1,21 @@
+.nav {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+
+  @media screen and (max-width: 960px) {
+    justify-content: space-between;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  margin-left: 32px;
+  gap: 32px;
+}
+
 .icons {
   display: flex;
   align-items: center;
@@ -22,4 +40,21 @@
   background: none;
   border: none;
   cursor: pointer;
+}
+
+.themeToggle {
+  border: none;
+  background: var(--white);
+}
+
+.logo {
+  min-width: 160px;
+  color: var(--black);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.themeToggle {
 }

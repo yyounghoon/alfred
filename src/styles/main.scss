@@ -1,0 +1,21 @@
+@import './_colors.scss';
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --grey: #7c7c7c;
+  --lightGrey: #fafafa;
+  --blockquote: #dfe2e5;
+  --hover: #44f;
+}
+
+html.dark {
+  --white: #{theme-color(dark, white)};
+  --grey: #{theme-color(dark, grey)};
+  --lightGrey: #{theme-color(dark, lightGrey)};
+  --black: #{theme-color(dark, black)};
+  --blockquote: #{theme-color(dark, blockquote)};
+  --hover: #{theme-color(dark, hover)};
+
+  background-color: #{theme-color(dark, white)};
+}

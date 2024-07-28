@@ -1,0 +1,22 @@
+$themes: (
+  light: (
+    black: '#000',
+    lightGrey: '#fafafa',
+    grey: '#7c7c7c',
+    blockquote: '#dfe2e5',
+    white: '#ffffff',
+    hover: '#44f',
+  ),
+  dark: (
+    black: '#ffffff',
+    lightGrey: '#fafafa',
+    grey: '#7c7c7c',
+    blockquote: '#dfe2e5',
+    white: '#000',
+    hover: '#44f',
+  ),
+);
+
+@function theme-color($theme, $property) {
+  @return map-get(map-get($themes, $theme), $property);
+}

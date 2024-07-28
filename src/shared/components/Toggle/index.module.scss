@@ -1,0 +1,19 @@
+.container {
+  width: 44px;
+  height: 24px;
+  border-radius: 8px;
+  border: 1px solid var(--black);
+  padding: 2px;
+}
+
+.ball {
+  width: 50%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--black);
+  transition: transform 0.3s;
+
+  &[data-darkMode='true'] {
+    transform: translateX(100%);
+  }
+}
