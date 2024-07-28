@@ -9,9 +9,11 @@ export const ThemeContext = createContext({
 });
 
 function ThemeProvider({ children }: PropsWithChildren) {
-  const [isDarkMode, setIsDarkMode] = useState(
-    localStorage.getItem('darkMode') === 'true',
-  );
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    setIsDarkMode(localStorage.getItem('darkMode') === 'true');
+  }, []);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -19,7 +21,7 @@ function ThemeProvider({ children }: PropsWithChildren) {
     } else {
       document.documentElement.classList.add('light');
     }
-  }, []);
+  }, [isDarkMode]);
 
   const toggleDarkMode = () => {
     setIsDarkMode((prev) => !prev);
