@@ -16,6 +16,10 @@
       .name {
         font-size: 22px;
         font-weight: bold;
+
+        &:hover {
+          opacity: 0.6;
+        }
       }
 
       .date {

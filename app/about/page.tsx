@@ -11,6 +11,7 @@ export type TCareer = {
   companyName: string;
   totalDate: string;
   group: TCareerGroup | TCareerGroup[];
+  homePage: string;
 };
 
 const CAREER_LIST: TCareer[] = [
@@ -28,6 +29,7 @@ const CAREER_LIST: TCareer[] = [
         desc: 'TBU',
       },
     ],
+    homePage: 'https://wemade.com',
   },
   {
     logoUrl: '/assets/huray.jpg',
@@ -39,6 +41,7 @@ const CAREER_LIST: TCareer[] = [
         desc: 'TBU',
       },
     ],
+    homePage: 'https://www.huray.net',
   },
 ];
 
